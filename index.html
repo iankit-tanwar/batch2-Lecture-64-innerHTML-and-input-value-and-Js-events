@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>batch2 Lecture 64 innerHTML and input value and Js events</title>
+</head>
+
+<body>
+
+    <div>
+        <span>
+            Hello
+        </span>
+    </div>
+
+    <form>
+        <input type="text" onkeyup="myFunc(this)">
+        <input type="radio">
+        <input type="checkbox">
+    </form>
+    <select class="slt" onchange="myFunc2(this)">
+        <option>male</option>
+        <option>female</option>
+        <option>other</option>
+    </select>
+
+    <textarea name="txt" id="txt" cols="30" rows="10"></textarea>
+
+
+    <script>
+
+        // funtion defiantion
+        function myFunc(e) {
+
+            //function body
+            console.log(e.value);
+
+            document.getElementById('txt').innerHTML = e.value;
+
+
+        }
+        //function defination
+
+        function myFunc2(e) {
+            //function body
+            console.log(e.value);
+
+        }
+    </script>
+
+</body>
+
+</html>
